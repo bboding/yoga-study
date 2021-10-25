@@ -7,7 +7,7 @@
     </div>
     <div>
       <h3>스터디</h3>
-      <a href="/asana">아쉬탕가 아사나 공부</a>
+      <button @click="onClickAsana">아쉬탕가 아사나 공부</button>
     </div>
   </div>
 </template>
@@ -18,6 +18,11 @@ export default {
     return {
       title: "yoga study",
     };
+  },
+  methods: {
+    onClickAsana() {
+      this.$router.push("/asana");
+    },
   },
 };
 </script>
