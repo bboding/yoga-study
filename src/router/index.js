@@ -1,15 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/components/Home'
+import TestAsanaName from '@/components/TestAsanaName'
+import Asana from '@/components/Asana'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      component: Home
+    },
+    {
+      path: '/asana',
+      component: Asana
+    },
+    {
+      path: '/test-asana-name',
+      component: TestAsanaName
     }
   ]
 })
