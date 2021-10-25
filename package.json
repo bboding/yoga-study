@@ -6,10 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "heroku-prebuild": "npm install --dev",
-    "start": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "heroku-postbuild": "webpack -p --config build/webpack.prod.conf.js --progress",
+    "postinstall": "npm run build",
+    "start": "node server.js"
   },
   "dependencies": {
     "vue": "^2.5.2",
