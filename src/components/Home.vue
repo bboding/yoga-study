@@ -3,9 +3,9 @@
     <div>
       <h3>테스트</h3>
       <button @click="$router.push('/test-asana-name')">
-        아사나 이름 외우기
+        아사나 이름 맞추기
       </button>
-      <!-- <a href="/asana-sequence">아사나 순서 외우기</a> -->
+      <!-- <a href="/test-ashitanga-sequence">아쉬탕가 시퀀스 순서 맞추기</a> -->
     </div>
     <div>
       <h3>스터디</h3>
@@ -20,6 +20,15 @@ export default {
     return {
       title: "yoga study",
     };
+  },
+  created() {
+    fetch("https://yoga-server-api.herokuapp.com/data/1", {
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   },
 };
 </script>
