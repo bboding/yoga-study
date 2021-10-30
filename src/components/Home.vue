@@ -21,15 +21,6 @@ export default {
       title: "yoga study",
     };
   },
-  created() {
-    fetch("https://yoga-server-api.herokuapp.com//poses", {
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  },
 };
 </script>
 
