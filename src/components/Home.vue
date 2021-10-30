@@ -22,7 +22,7 @@ export default {
     };
   },
   created() {
-    fetch("http://localhost:3000/poses", {
+    fetch("https://yoga-server-api.herokuapp.com//poses", {
       headers: {
         Accept: "application/json",
       },

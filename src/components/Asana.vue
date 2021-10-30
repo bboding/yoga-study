@@ -22,7 +22,7 @@ export default {
     };
   },
   async created() {
-    const res = await fetch(`http://localhost:3000/poses`, {
+    const res = await fetch(`https://yoga-server-api.herokuapp.com/poses`, {
       headers: {
         Accept: "application/json",
       },
