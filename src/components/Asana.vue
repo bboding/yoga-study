@@ -6,7 +6,7 @@
         <img
           :src="require(`../assets/poses/${pose.name}.png`)"
           alt="img"
-          width="100"
+          width="200"
         />
         <p>{{ `${pose.korean} (${pose.name})` }}</p>
       </div>

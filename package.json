@@ -13,8 +13,11 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@mdi/font": "^6.4.95",
+    "axios": "^0.24.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^2.5.10"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

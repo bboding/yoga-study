@@ -1,12 +1,17 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <a href="/" class="logo"
       ><img src="./assets/om.png" width="50" style="padding: 10px" />
       <h1>Home</h1>
     </a>
 
     <router-view />
-  </div>
+
+    <a v-if="$route.path !== '/'" href="/" class="logo"
+      ><img src="./assets/om.png" width="50" style="padding: 10px" />
+      <h1>Home</h1>
+    </a>
+  </v-app>
 </template>
 
 <script>
