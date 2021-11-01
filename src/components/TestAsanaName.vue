@@ -7,9 +7,7 @@
         {{ `결과: ${score}/10` }}
         <span v-if="score === 10">🎉</span>
       </h1>
-      <v-btn depressed @click="makeQuizzed"
-        >다시하기
-      </v-btn>
+      <v-btn depressed @click="makeQuizzed">다시하기 </v-btn>
     </div>
 
     <div
@@ -92,7 +90,7 @@ export default {
     async makeQuizzed() {
       this.score = 0;
       const { data } = await this.$axios.get(
-        "http://localhost:3000/quiz/poses",
+        "https://yoga-server-api.herokuapp.com/quiz/poses",
         {
           headers: {
             Accept: "application/json",
