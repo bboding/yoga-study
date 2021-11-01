@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 style="margin-bottom: 50px">아쉬탕가 아사나 이름 외우기</h2>
+    <h2 style="margin-bottom: 50px">아사나 이름 맞추기</h2>
     <div v-if="isShowResult" class="mb-5">
       <h1>
         <span v-if="score === 10">🎉</span>
@@ -26,7 +26,7 @@
       <img
         :src="require(`@/assets/poses/${quiz.name}.png`)"
         alt="img"
-        width="200"
+        width="150"
       />
       <div v-for="(question, i) of quiz.questionList" :key="`item-${i}`">
         <input
@@ -107,6 +107,9 @@ export default {
 </script>
 
 <style scoped>
+label {
+  font-size: 18px;
+}
 .font-green {
   color: #4caf50;
 }
